@@ -47,3 +47,30 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
   npx create-next-app@latest ./
 
 ```
+
+## Learning - components
+
+```
+   The components should be outside of app, only next.js related files & layout, pages should in app folder as according to 13.4 version
+```
+
+## Erros - Fixed
+
+When defining your custom imports in tsconfig.json, you must match all paths after @components, using /\*, otherwise the resolver will not expect any further paths.
+
+Therefore, change your paths to:
+
+```
+"paths": {
+  "@app/*": ["./app/*"],
+  "@assets/*": ["./assets/*"],
+  "@components/*": ["./components/*"],
+  "@styles/*": ["./styles/*"],
+  "@utils/*": ["./utils/*"]
+}
+
+```
+
+NB: The path linked to each @import should be the path of that directory; For example, if your @components are in the ./src/components directory, then change the path linked to @components to ["./src/components/*"]
+
+checkout [Defining-custom-imports](https://stackoverflow.com/questions/75644589/cannot-find-module-components-or-its-corresponding-type-declarations-ts2)
