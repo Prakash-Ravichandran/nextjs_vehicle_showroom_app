@@ -54,7 +54,19 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
    The components should be outside of app, only next.js related files & layout, pages should in app folder as according to 13.4 version
 ```
 
+```
+  Reusability/Dynamic - The concept of resuability/dynamic in react/next is by passing a props to the component.
+
+```
+
+```
+  "use client" : Next.js Component by default is server side, use client must be specified by CSR components.
+
+```
+
 ## Erros - Fixed
+
+### Custom Imports issue
 
 When defining your custom imports in tsconfig.json, you must match all paths after @components, using /\*, otherwise the resolver will not expect any further paths.
 
@@ -74,3 +86,19 @@ Therefore, change your paths to:
 NB: The path linked to each @import should be the path of that directory; For example, if your @components are in the ./src/components directory, then change the path linked to @components to ["./src/components/*"]
 
 checkout [Defining-custom-imports](https://stackoverflow.com/questions/75644589/cannot-find-module-components-or-its-corresponding-type-declarations-ts2)
+
+### isolate modules error - fix
+
+The correct way is to tell TypeScript what you want. If you don't want isolatedModules create tsconfig.json inside your test directory and add:
+
+```
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "isolatedModules": false
+  },
+}
+
+```
+
+Adding "isolatedModules": true to the config and then cheating TypeScript checker by adding empty export {} smells bad code to me.
