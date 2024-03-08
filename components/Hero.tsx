@@ -1,7 +1,11 @@
+"use client";
+
 import { CustomButton } from "@/components/CustomButton";
 
 export const Hero = () => {
-  const handleScroll = () => {};
+  const handleScroll = () => {
+    console.log("function");
+  };
 
   return (
     <>
@@ -15,7 +19,7 @@ export const Hero = () => {
             Process.
           </p>
           <CustomButton
-            title={"Explore cars"}
+            title="Explore cars"
             containerStyles={"bg-primary-blue text-white rounded-full"}
             handleClick={handleScroll}
           />

@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 
 import { CustomButtonprops } from "../types";
 
@@ -9,8 +9,13 @@ export const CustomButton = ({
 }: CustomButtonprops) => {
   return (
     <>
-      <button disabled={false} type={"button"} className={`custom-btn`}>
-        <span className="custom-btn__text">Book Now</span>
+      <button
+        disabled={false}
+        type={"button"}
+        className={`custom-btn ${containerStyles}`}
+        onClick={handleClick}
+      >
+        <span className="custom-btn__text">{title}</span>
       </button>
     </>
   );
