@@ -1,6 +1,7 @@
 "use client";
 
 import { CustomButton } from "@/components/CustomButton";
+import Image from "next/image";
 
 export const Hero = () => {
   const handleScroll = () => {
@@ -23,6 +24,17 @@ export const Hero = () => {
             containerStyles={"bg-primary-blue text-white rounded-full"}
             handleClick={handleScroll}
           />
+          <div className="hero__image-container">
+            <div className="hero__image">
+              <Image
+                src="/hero.png"
+                alt="hero"
+                fill
+                className="object-contain"
+              />
+              <div className="hero__image-overlay" />
+            </div>
+          </div>
         </div>
       </div>
     </>
