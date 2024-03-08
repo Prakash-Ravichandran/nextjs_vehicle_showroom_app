@@ -64,6 +64,19 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ```
 
+### Creation of interface for Button Props
+
+```
+import { MouseEventHandler } from "react";
+
+export interface CustomButtonprops {
+  title: String;
+  containerStyles?: String;
+  handleClick?: MouseEventHandler<HTMLButtonElement>;
+}
+
+```
+
 ## Erros - Fixed
 
 ### Custom Imports issue
