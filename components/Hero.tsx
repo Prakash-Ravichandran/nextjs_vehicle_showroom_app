@@ -23,6 +23,7 @@ export const Hero = () => {
             title="Explore cars"
             containerStyles={"bg-primary-blue text-white rounded-full"}
             handleClick={handleScroll}
+            btnType={"button"}
           />
           <div className="hero__image-container">
             <div className="hero__image">
