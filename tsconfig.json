@@ -20,8 +20,9 @@
       }
     ],
     "paths": {
-      "@/components/*": ["./components/*"],
+      // "@/components/*": ["./components/*"],
       "@/types/*": ["./types/*"],
+      "@/constants/*": ["./constants/*"],
       "@/*": ["./*"]
     }
   },
