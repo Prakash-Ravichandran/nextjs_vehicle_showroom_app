@@ -21,7 +21,7 @@
     ],
     "paths": {
       // "@/components/*": ["./components/*"],
-      "@/types/*": ["./types/*"],
+      // "@/types/*": ["./types/*"],
       "@/constants/*": ["./constants/*"],
       "@/*": ["./*"]
     }
